@@ -1,0 +1,35 @@
+package teste;
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite um n�mero: ");
+		int num = sc.nextInt();
+
+		int a = 0;
+		int aux;
+		int b = 1;
+		int pertence = 0;
+
+		while (a <= num) {
+			aux = a;
+			a = a + b;
+			b = aux;
+			if (num == a) {
+				pertence = 1;
+				break;
+			}
+		}
+		if (pertence == 0) {
+			System.out.print("N�o pertence a sequ�ncia");
+		} else {
+			System.out.print("Pertence a sequ�ncia");
+
+		}
+	}
+}
