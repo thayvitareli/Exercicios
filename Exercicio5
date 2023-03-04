@@ -1,0 +1,28 @@
+package teste;
+
+import java.util.Scanner;
+
+public class Exercicio5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String string;
+		int stringLenght;
+		
+		
+		string = sc.next();
+		
+		stringLenght = string.length();
+		char[] reverse = new  char[stringLenght];
+		
+		for (int i= 0; i< stringLenght; i++) {
+			reverse[stringLenght - i - 1] = string.charAt(i);
+			
+		}
+		System.out.println(String.copyValueOf(reverse));
+	}
+
+}
