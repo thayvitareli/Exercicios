@@ -1,0 +1,43 @@
+package teste;
+
+import java.util.Scanner;
+
+public class Exercicio4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+			double faturamentoSp = 67836.43;
+			double faturamentoRj = 36678.66;
+			double faturamentoMg = 29229.88;
+			double faturamentoEs = 27165.48;
+			double faturamentoOutros = 19849.53;
+			double faturamentoTotal;
+			
+			
+			faturamentoTotal = faturamentoSp+faturamentoRj+faturamentoMg+faturamentoEs+faturamentoOutros;
+			
+			System.out.printf("Faturamento Total = %.2f ",faturamentoTotal);
+			System.out.println();
+			System.out.println("Percentual de faturamento: ");
+
+			System.out.printf("SP - %.2f", calcularPercentual(faturamentoTotal,faturamentoSp));
+			System.out.printf("\nRJ - %.2f ",calcularPercentual(faturamentoTotal,faturamentoRj));
+			System.out.printf("\nMG - %.2f" , calcularPercentual(faturamentoTotal,faturamentoMg));
+			System.out.printf("\nES - %.2f", calcularPercentual(faturamentoTotal,faturamentoEs));
+			System.out.printf("\nOutros - %.2f", calcularPercentual(faturamentoTotal,faturamentoOutros));
+
+		
+		
+	}
+	
+	static double calcularPercentual(Double total, Double faturamento) {
+		double percentual;
+		
+		percentual = faturamento*100.00/total;
+		return percentual;
+		
+	}
+
+}
